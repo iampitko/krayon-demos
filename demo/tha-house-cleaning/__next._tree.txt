@@ -1,0 +1,3 @@
+:HL["/demo/tha-house-cleaning/_next/static/chunks/1ko0826u0mj9a.css","style"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"xcUcP89h5v2Gj7tEJtgtv","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
