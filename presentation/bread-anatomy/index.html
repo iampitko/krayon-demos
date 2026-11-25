@@ -3,89 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Реклама для The Bread Anatomy — презентація Krayon</title>
+<title>Реклама для The Bread Anatomy — Krayon</title>
 <style>
   :root{
-    --bg:#faf6ef; --card:#ffffff; --ink:#221c14; --muted:#6f6455;
-    --accent:#b97f26; --accent-soft:#f3e5cd; --line:#e7dcc8;
-    --ad-blue:#1a0dab; --ad-green:#006621;
+    --bg:#0a0a0a; --card:#141414; --card2:#1b1b1b; --line:#2a2a2a;
+    --ink:#f5f2ec; --muted:#a79f92; --accent:#c99a3a; --accent-soft:#2a2113;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55;}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px 64px;}
-  header{background:#0d0d0d; color:#fff; padding:26px 0; margin-bottom:36px;}
-  header .wrap{padding-bottom:0;}
-  .logo{font-weight:800; letter-spacing:.35em; font-size:20px;}
-  .logo span{color:var(--accent);}
-  header p{color:#bdbdbd; font-size:14px; margin-top:6px; letter-spacing:.04em;}
-  h1{font-size:30px; line-height:1.25; margin-bottom:10px;}
-  .lead{font-size:17px; color:var(--muted); margin-bottom:30px;}
-  h2{font-size:21px; margin:38px 0 14px;}
-  p{margin-bottom:12px;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6;}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px 70px;}
+  header{padding:34px 0 8px; display:flex; align-items:center; gap:16px;}
+  header img{width:58px; height:58px; border-radius:12px; display:block;}
+  .wordmark{font-weight:800; letter-spacing:.35em; font-size:21px;}
+  .wordmark small{display:block; letter-spacing:.06em; font-weight:400; font-size:13px; color:var(--muted); margin-top:3px;}
+  .hero{padding:30px 0 6px;}
+  h1{font-size:32px; line-height:1.25; margin-bottom:12px;}
+  .lead{font-size:17px; color:var(--muted); max-width:640px;}
+  h2{font-size:21px; margin:44px 0 16px;}
+  p{margin-bottom:12px; color:#e8e3d9;}
   .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
-  .step{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px;}
-  .step .num{display:inline-block; background:var(--accent); color:#fff; width:26px; height:26px; border-radius:50%; text-align:center; line-height:26px; font-weight:700; font-size:14px; margin-bottom:10px;}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px;}
+  .step .num{display:inline-block; background:var(--accent); color:#141414; width:27px; height:27px; border-radius:50%; text-align:center; line-height:27px; font-weight:800; font-size:14px; margin-bottom:12px;}
   .step h3{font-size:16px; margin-bottom:6px;}
   .step p{font-size:14px; color:var(--muted); margin:0;}
   .ads{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .ad{background:#fff; border:1px solid #dadce0; border-radius:12px; padding:16px 18px; font-family:Arial,sans-serif;}
-  .ad .sponsored{font-size:12px; font-weight:700; color:#202124; margin-bottom:4px;}
-  .ad .url{font-size:13px; color:#202124; margin-bottom:2px;}
+  .ad{background:#fff; border-radius:14px; padding:18px 20px; font-family:Arial,sans-serif; color:#202124;}
+  .ad .sponsored{font-size:12px; font-weight:700; margin-bottom:4px;}
+  .ad .url{font-size:13px;}
   .ad .url small{color:#5f6368;}
-  .ad .head{font-size:19px; color:var(--ad-blue); line-height:1.3; margin:2px 0 4px;}
-  .ad .desc{font-size:14px; color:#4d5156;}
-  .ad .tag{display:inline-block; margin-top:10px; font-size:12px; background:var(--accent-soft); color:#7a5514; border-radius:20px; padding:3px 10px; font-weight:600;}
-  .calc{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px;}
-  .calc .row{margin-bottom:20px;}
-  .calc label{display:flex; justify-content:space-between; font-weight:600; font-size:15px; margin-bottom:8px;}
-  .calc label output{color:var(--accent); font-weight:800;}
-  input[type=range]{width:100%; accent-color:var(--accent); height:28px;}
-  .results{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:6px;}
-  .res{background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:14px; text-align:center;}
-  .res .big{font-size:26px; font-weight:800; color:var(--ink);}
-  .res .cap{font-size:13px; color:var(--muted); margin-top:2px;}
-  .note{font-size:13px; color:var(--muted); margin-top:14px;}
-  .next{background:#0d0d0d; color:#f2ede3; border-radius:14px; padding:24px; margin-top:38px;}
-  .next h2{color:#fff; margin-top:0;}
-  .next p{color:#d8d2c6;}
-  .next .phone{font-size:20px; font-weight:800; color:#fff; letter-spacing:.02em;}
-  footer{margin-top:30px; font-size:13px; color:var(--muted); text-align:center;}
+  .ad .head{font-size:19px; color:#1a0dab; line-height:1.3; margin:2px 0 4px;}
+  .ad .desc{font-size:14px; color:#4d5156; margin:0;}
+  .ad .tag{display:inline-block; margin-top:12px; font-size:12px; background:#f3e5cd; color:#7a5514; border-radius:20px; padding:3px 10px; font-weight:600;}
+  .fineprint{font-size:13px; color:var(--muted); margin-top:12px;}
+  .calc{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px;}
+  .calc label{display:flex; justify-content:space-between; align-items:baseline; font-weight:600; font-size:15px; margin-bottom:6px;}
+  .calc label output{color:var(--accent); font-weight:800; font-size:20px;}
+  .rec{font-size:13px; color:var(--accent); margin-bottom:8px;}
+  input[type=range]{width:100%; accent-color:var(--accent); height:30px;}
+  .results{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px;}
+  .res{background:var(--card2); border:1px solid var(--line); border-radius:12px; padding:16px 10px; text-align:center;}
+  .res .big{font-size:25px; font-weight:800;}
+  .res .cap{font-size:12.5px; color:var(--muted); margin-top:3px; line-height:1.4;}
+  .prices{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .price{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px;}
+  .price.main{border-color:var(--accent);}
+  .price .amount{font-size:32px; font-weight:800; margin:4px 0 8px;}
+  .price .amount small{font-size:15px; color:var(--muted); font-weight:400;}
+  .price h3{font-size:16px;}
+  .price ul{list-style:none; margin-top:8px;}
+  .price li{font-size:14px; color:var(--muted); padding:3px 0 3px 18px; position:relative;}
+  .price li:before{content:""; position:absolute; left:0; top:11px; width:7px; height:7px; border-radius:50%; background:var(--accent);}
+  .cta{background:var(--accent-soft); border:1px solid var(--accent); border-radius:16px; padding:26px; margin-top:44px; text-align:center;}
+  .cta h2{margin:0 0 8px;}
+  .cta p{color:#ddd5c3;}
+  .cta .phone{font-size:24px; font-weight:800; color:#fff; margin-top:10px;}
+  footer{margin-top:34px; font-size:13px; color:var(--muted); text-align:center;}
   @media (max-width:700px){
-    .steps,.ads,.results{grid-template-columns:1fr;}
-    h1{font-size:25px;}
+    .steps,.ads,.prices{grid-template-columns:1fr;}
+    .results{grid-template-columns:1fr 1fr;}
+    h1{font-size:26px;}
   }
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <div class="logo">KRAY<span>O</span>N</div>
-    <p>Агенція цифрового маркетингу, Сіетл</p>
-  </div>
-</header>
-
 <div class="wrap">
 
-  <h1>Реклама для The Bread Anatomy</h1>
-  <p class="lead">Перший варіант реклами в Google, підготовлений для пекарні в Квакертауні. Показуємо до будь якого запуску, щоб ви бачили, що саме побачать люди і як рахується бюджет.</p>
+  <header>
+    <img src="logo.jpg" alt="Krayon">
+    <div class="wordmark">KRAYON<small>Агенція цифрового маркетингу</small></div>
+  </header>
+
+  <div class="hero">
+    <h1>Реклама в Google для The Bread Anatomy</h1>
+    <p class="lead">Показуємо пекарню людям навколо Квакертауна саме в момент, коли вони шукають випічку поруч. Нижче просто і по кроках, як це працює і що це коштує.</p>
+  </div>
 
   <h2>Як це працює</h2>
   <div class="steps">
     <div class="step">
       <span class="num">1</span>
       <h3>Людина шукає</h3>
-      <p>Хтось поруч із Квакертауном вводить у Google «українська пекарня поруч», «паска на замовлення» або «ukrainian bakery near me».</p>
+      <p>Хтось поруч вводить у Google «паска на замовлення», «українська пекарня поруч» або «ukrainian bakery near me».</p>
     </div>
     <div class="step">
       <span class="num">2</span>
-      <h3>Бачить ваше оголошення</h3>
-      <p>Ваша пекарня показується угорі результатів пошуку, саме в момент, коли людина вже хоче купити випічку.</p>
+      <h3>Бачить пекарню</h3>
+      <p>The Bread Anatomy показується угорі пошуку, коли людина вже готова замовляти.</p>
     </div>
     <div class="step">
       <span class="num">3</span>
-      <h3>Пише вам напряму</h3>
-      <p>Оголошення веде на вашу сторінку в Instagram, де людина одразу пише повідомлення і замовляє.</p>
+      <h3>Пише і замовляє</h3>
+      <p>Реклама веде на сторінку в Instagram, де людина одразу пише повідомлення із замовленням.</p>
     </div>
   </div>
 
@@ -95,45 +103,62 @@
       <div class="sponsored">Sponsored</div>
       <div class="url">instagram.com <small>› thebreadanatomy</small></div>
       <div class="head">Ukrainian Bakery in Quakertown | Fresh Paska and Kolach</div>
-      <div class="desc">Traditional Ukrainian holiday breads baked to order in Quakertown. Paska, kolach and babka from family recipes. Message us to reserve yours for the holidays.</div>
+      <p class="desc">Traditional Ukrainian holiday breads baked to order in Quakertown. Paska, kolach and babka from family recipes. Message us to reserve yours for the holidays.</p>
       <span class="tag">Англійською, для місцевих</span>
     </div>
     <div class="ad">
       <div class="sponsored">Реклама</div>
       <div class="url">instagram.com <small>› thebreadanatomy</small></div>
       <div class="head">Українська пекарня поруч | Паска і колач на замовлення</div>
-      <div class="desc">Печемо паски, колачі та святковий хліб за українськими рецептами тут, у Пенсильванії. Замовлення приймаємо наперед, до свят і сімейних подій.</div>
+      <p class="desc">Печемо паски, колачі та святковий хліб за українськими рецептами тут, у Пенсильванії. Замовлення приймаємо наперед, до свят і сімейних подій.</p>
       <span class="tag">Українською, для діаспори</span>
     </div>
   </div>
-  <p class="note">Територія показу — Квакертаун і радіус близько 20 миль навколо. Дві окремі групи оголошень, англійська й українська, щоб кожна людина бачила рекламу своєю мовою.</p>
+  <p class="fineprint">Територія показу це Квакертаун і радіус близько 20 миль навколо. Дві окремі групи оголошень, щоб кожна людина бачила рекламу своєю мовою.</p>
 
-  <h2>Калькулятор бюджету</h2>
+  <h2>Скільки людей прийде</h2>
   <div class="calc">
-    <div class="row">
-      <label>Бюджет на день <output id="budgetOut">$10</output></label>
-      <input type="range" id="budget" min="5" max="50" step="1" value="10">
-    </div>
-    <div class="row">
-      <label>Ціна одного переходу <output id="cpcOut">$2.00</output></label>
-      <input type="range" id="cpc" min="1" max="3" step="0.25" value="2">
-    </div>
+    <label>Бюджет реклами на день <output id="budgetOut">$20</output></label>
+    <div class="rec">Ми рекомендуємо 20 доларів на день</div>
+    <input type="range" id="budget" min="10" max="40" step="1" value="20">
     <div class="results">
-      <div class="res"><div class="big" id="clicksDay">5</div><div class="cap">переходів на день</div></div>
-      <div class="res"><div class="big" id="clicksMonth">150</div><div class="cap">переходів на місяць</div></div>
-      <div class="res"><div class="big" id="msgsMonth">30</div><div class="cap">повідомлень на місяць, орієнтовно</div></div>
+      <div class="res"><div class="big" id="clicksDay">10</div><div class="cap">переходів на день</div></div>
+      <div class="res"><div class="big" id="clicksMonth">300</div><div class="cap">переходів на місяць</div></div>
+      <div class="res"><div class="big" id="msgsMonth">60</div><div class="cap">повідомлень на місяць, орієнтовно</div></div>
+      <div class="res"><div class="big" id="spendMonth">$600</div><div class="cap">бюджет на місяць</div></div>
     </div>
-    <p class="note">Як ми рахуємо. Локальні кліки по їжі в такому радіусі коштують орієнтовно від 1 до 3 доларів, повзунком можна поставити свою оцінку. Повідомлення рахуємо обережно, приблизно кожен п'ятий відвідувач сторінки пише в Direct. Це орієнтир для розмови, а не обіцянка, точні цифри покаже сам тест.</p>
+    <p class="fineprint">Як ми рахуємо. Середня ціна одного переходу у вашій сфері у вашому регіоні становить близько 2 доларів, цю цифру ми взяли на себе і заклали в розрахунок. Повідомлення рахуємо обережно, приблизно кожен п'ятий відвідувач сторінки пише в Direct. Це орієнтир, точні цифри покаже перший тест.</p>
   </div>
 
-  <h2>Що пропонуємо на старт</h2>
-  <p>Почати обережно, з бюджетом 10 доларів на день, і за два тижні подивитися на реальні цифри. Скільки людей перейшло, скільки написало, скільки замовило. Далі вже разом вирішуємо, чи збільшувати бюджет, чи щось міняти.</p>
-  <p>Окрема чесна думка на потім. Проста сторінка з асортиментом, цінами і формою замовлення підніме віддачу від реклами, бо з Instagram частина людей губиться по дорозі. Це не умова запуску, а наступний крок, якщо тест дасть замовлення.</p>
+  <h2>Що коштує наша робота</h2>
+  <div class="prices">
+    <div class="price main">
+      <h3>Запуск і перший місяць</h3>
+      <div class="amount">$350</div>
+      <ul>
+        <li>Налаштування рекламного кабінету і кампанії</li>
+        <li>Дві групи оголошень, англійська й українська</li>
+        <li>Підбір запитів і відсікання зайвих показів</li>
+        <li>Перші коригування за результатами тестів</li>
+      </ul>
+    </div>
+    <div class="price">
+      <h3>Кожен наступний місяць</h3>
+      <div class="amount">$250 <small>на місяць</small></div>
+      <ul>
+        <li>Ведення і постійна оптимізація кампанії</li>
+        <li>Коригування бюджету і ставок</li>
+        <li>Звіт по переходах і повідомленнях</li>
+        <li>Пропозиції, що покращити далі</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fineprint">Рекламний бюджет із калькулятора вище оплачується напряму в Google і в ці суми не входить. Старт обережний. За два тижні тесту видно перші реальні цифри, і далі разом вирішуємо, чи збільшувати бюджет.</p>
 
-  <div class="next">
+  <div class="cta">
     <h2>Обговоримо на короткому дзвінку?</h2>
-    <p>Покажемо все наживо, відповімо на питання і, якщо варіант підходить, запустимо тест. Дзвоніть або пишіть у будь який момент, ми на зв'язку 24/7.</p>
-    <p class="phone">+1 425 548 7289</p>
+    <p>Покажемо все наживо, відповімо на питання і запустимо тест, якщо варіант підходить. Дзвоніть або пишіть у будь який момент, ми на зв'язку 24/7.</p>
+    <div class="phone">+1 425 548 7289</div>
     <p>Олексій, агенція Krayon</p>
   </div>
 
@@ -143,21 +168,19 @@
 
 <script>
   var budget = document.getElementById('budget');
-  var cpc = document.getElementById('cpc');
+  var CPC = 2;
   function fmt(n){ return n.toLocaleString('uk-UA'); }
   function calc(){
     var b = parseFloat(budget.value);
-    var c = parseFloat(cpc.value);
     document.getElementById('budgetOut').textContent = '$' + b;
-    document.getElementById('cpcOut').textContent = '$' + c.toFixed(2);
-    var perDay = b / c;
+    var perDay = b / CPC;
     var perMonth = perDay * 30;
     document.getElementById('clicksDay').textContent = fmt(Math.round(perDay));
     document.getElementById('clicksMonth').textContent = fmt(Math.round(perMonth));
     document.getElementById('msgsMonth').textContent = fmt(Math.round(perMonth / 5));
+    document.getElementById('spendMonth').textContent = '$' + fmt(Math.round(b * 30));
   }
   budget.addEventListener('input', calc);
-  cpc.addEventListener('input', calc);
   calc();
 </script>
 
